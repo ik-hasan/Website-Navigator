@@ -1,0 +1,31 @@
+{
+  "name": "agentic-tester-server",
+  "version": "1.0.0",
+  "description": "Backend server for Agentic Website Testing System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "testing",
+    "automation",
+    "AI",
+    "playwright",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0",
+    "playwright": "^1.60.0",
+    "sharp": "^0.33.2",
+    "socket.io": "^4.6.1",
+    "uuid": "^9.0.1"
+  }
+}
