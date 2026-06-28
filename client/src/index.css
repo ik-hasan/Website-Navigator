@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Smooth animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/95 dark:bg-gray-800/95;
+  backdrop-filter: blur(10px);
+  @apply border border-white/20 dark:border-gray-700/50;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-lg font-medium;
+  @apply hover:from-primary-700 hover:to-primary-800 transition-all duration-200;
+  @apply shadow-lg hover:shadow-xl transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-medium;
+  @apply hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg;
+  @apply bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  @apply transition-all duration-200;
+}
+
+.textarea-field {
+  @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg;
+  @apply bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  @apply transition-all duration-200 resize-none;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6;
+  @apply border border-gray-100 dark:border-gray-700;
+}
+
+/* Log console styles */
+.log-entry {
+  @apply py-2 px-3 rounded font-mono text-sm border-l-4 mb-2;
+}
+
+.log-info {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300;
+}
+
+.log-success {
+  @apply border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300;
+}
+
+.log-error {
+  @apply border-red-500 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300;
+  @apply shadow-sm;
+}
+
+.progress-container {
+  @apply w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
